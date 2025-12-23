@@ -1,0 +1,20 @@
+[Unit]
+Description=Yonex Product Monitor - Checks for product changes on yonex.ch
+After=network.target
+
+[Service]
+Type=simple
+# Change 'youruser' to your actual Linux username
+User=youruser
+# Change this to where you put the project on the server
+WorkingDirectory=/home/youruser/yonex-shop-update-check
+# Path to your venv python and the script
+ExecStart=/home/youruser/yonex-shop-update-check/venv/bin/python yonex_site_checker.py -qwen
+# Restart automatically if it crashes
+Restart=always
+RestartSec=10
+# Environment variables (optional - you could move your API key here)
+# Environment=GEMINI_API_KEY=your_key_here
+
+[Install]
+WantedBy=multi-user.target

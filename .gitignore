@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# App runtime / local data
+telegram_subscribers.json
+
+
+# Optional local secrets file
+.env
